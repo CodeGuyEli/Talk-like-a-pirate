@@ -1,11 +1,28 @@
 <html>
 <head>
-  <title>My page</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<style type="text/css">
+  textarea {
+    width: 400px;
+    height: 200px;
+    font-family: arial;
+  }
+</style>
+<script>
+  $("#normal").keyup(function(){
+  var words = $("#normal").val();
+words = words.replace(/(\w+)ev(\w+)\s/g, "$1e'$2 ");
+  $("#pirate").val(words);
+});
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</script>
 </head>
 <body>
-  My content here
-  <h2>Landlubbers</h2>
+
+<h2>Landlubbers</h2>
 <textarea id="normal"></textarea>
+
+<h2>Pirates</h2>
+<textarea id="pirate"></textarea>
+
 </body>
 </html>
